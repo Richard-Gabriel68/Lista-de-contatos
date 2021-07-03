@@ -1,0 +1,82 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+ul, li {
+    list-style: none;
+}
+li {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+body #app {
+    width: 60vw;
+    height: 55vh;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: rgb(218, 216, 216);
+    box-shadow: 3px 3px 7px gray;
+    border-radius: 15px;
+}
+body #app main {
+    height: 75%;
+    width: 100%;
+    display: flex;
+}
+body #app main .digite {
+    flex: 1;
+    text-align: center;
+    color: gray;
+}
+body #app main .digite input {
+    margin-top: 2rem;
+    margin-left: 0.7rem;
+    padding: 0.5rem;
+    border: 1px solid #000;
+}
+body #app main .digite button {
+    background-image: linear-gradient(45deg, rgb(124, 207, 240), rgb(45, 171, 194), rgb(124, 207, 240));
+    padding: 0.5rem;
+    font-weight: bold;
+    width: 140px;
+    border: none;
+    color: #fff;
+}
+body #app main .lista {
+    flex: 1;
+    text-align: center;
+    background-color: rgb(226, 239, 243);
+    border-top-right-radius: 10px;
+    overflow-y: auto;
+}
+body #app main .lista i
+{
+    left: 10px;
+    font-size: 25px;
+    color: gray;
+}
+body #app footer{
+    padding-left: 2rem;
+    font-size: 18px;
+}
+
+/*RESPONSIVE -------------------*/
+
+@media (max-width:450px)
+{
+    body #app {
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        background-color: rgb(218, 216, 216);
+        box-shadow: none;
+        border-radius: 0;
+    }
+    body #app main {
+        flex-direction: column-reverse;
+    }
+}

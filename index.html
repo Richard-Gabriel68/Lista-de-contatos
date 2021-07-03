@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/557a9eecff.js" crossorigin="anonymous"></script>
+    <script src="vue.min.js"></script>
+    <title>Contatos</title>
+</head>
+<body>
+    <div id="app">
+        <main>
+            <section class="digite">
+                <h3>Adicionar novo</h3>
+                <input v-model='contato'>
+                <button @click='add'>Adicionar</button>
+            </section>
+
+            <section class="lista">
+                <h3>Contatos</h3>
+                <ul>
+                    <li v-for='item in lista'>
+                        <i class="fas fa-user"></i>  {{item}}
+                    </li>
+                </ul>
+                <p>Total de contatos: {{ lista.length}}</p>
+            </section>
+
+        </main>
+
+        <footer>
+            {{aviso}}
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
