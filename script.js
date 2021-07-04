@@ -12,21 +12,29 @@ let app = new Vue({
                 this.lista.push(this.contato);
 
                 this.contato='';
+
+                document.querySelector('button').style.display = 'none';
+                
             }
         },
         clear: function(){
             this.aviso='';
+
+            document.querySelector('button').style.display = 'inline-block';
         }
     },
     watch: {
         contato: function(){
-            this.aviso='digitando...';
+            if(this.contato.length > 0){
+                this.aviso='digitando...';
 
-            if (this.aviso != null){
+                if (this.aviso != null){
                 clearTimeout(this.timer);
-            }
+                }
 
-            this.timer = setTimeout(this.clear, 1000);
+                this.timer = setTimeout(this.clear, 1000);
+            }
+            
         }
     }
 })

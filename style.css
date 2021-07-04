@@ -45,6 +45,8 @@ body #app main .digite button {
     width: 140px;
     border: none;
     color: #fff;
+    box-shadow: 3px 3px 8px gray;
+    display: none;
 }
 body #app main .lista {
     flex: 1;
